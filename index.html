@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation tests</title>
+
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        body{
+            margin: 0;
+            width: 100vh;
+            background-color: #fefefe;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+           
+
+        }
+        #button{
+           
+            height: 50vh;
+            width: 100%;
+            background-color: #fefefe;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 30px ;
+
+
+        }
+        button{
+
+            padding: 12px 24px;
+            border: none;
+            color:white;
+            background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+            box-shadow: 8px 12px 7px lightgray;
+            font-size: 1.5rem;
+            border-radius:4px ;
+            animation: buttonanimation 2.2s linear infinite;/*connects the animation with the button. */
+            /* creating the style of the button. */
+        }
+
+        button:hover{
+            cursor:pointer; /* places a hand when hoover over the button*/
+            filter: brightness(1.1); /* creates a shining effect when hoovering over the button*/
+
+        }
+
+        #loader{
+            
+            height: 50vh;
+            width: 100%;
+            background-color: #fefefe;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 30px;
+            /* creating a div for the animation */
+        }
+
+        .loadericon{
+            border: 5px solid #d53369;
+            border-radius: 50%;
+            margin: 8px;
+            /* creating the individual dots */
+            
+        }
+
+        
+        .loadericon:nth-child(1){
+            animation: loader 0.8s ease-in-out alternate infinite;
+        }
+        .loadericon:nth-child(2){
+            animation: loader 0.8s ease-in-out .3s alternate infinite;
+        }
+        .loadericon:nth-child(3){
+            animation: loader 0.8s ease-in-out .6s alternate infinite;
+        }
+            /* using nth child to select each participant of the class individualy and making a delay for each one to create the desired effect */
+
+        #rocket{
+           
+            height: 500vh;
+            width: 100%;
+            background:  linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(34,13,80,1) 50%, rgba(74,153,230,1) 100%);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 30px;
+            /* creating the div for the animation. */
+        }
+
+        .rocket1{
+            animation: rocket 15s ease-in-out infinite alternate;
+            /* conecting the created animation with the IMG */
+        }
+        #gradient{
+            
+            height: 50vh;
+            width: 100%;
+            color: white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 30px;
+            background: linear-gradient(-45deg, #d53369, #daae51);
+            
+            text-align: center;
+            background-size: 400% 400%;/* expanding the background in order to see just a small part of it */
+            /* creating a div for the animation */
+            animation: gradient 5s ease infinite alternate;
+
+
+        }
+        h1 {
+            font-size: 3rem;
+            position: relative;
+            font-family: 'Quicksand', sans-serif;
+            bottom: 100px;
+            
+        }
+        p {
+            font-family: 'Pacifico', sans-serif;
+            margin: 0;
+            font-size: 4.5rem;
+            background: linear-gradient(0deg, transparent, rgba(24, 24, 24, .4));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .box{
+            height: 50vh;
+            width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 30px;
+            background-color: #222;
+            perspective: 300px;
+            /* creating the div */
+           
+
+        }
+        .box1{
+
+            position: absolute;
+            background: linear-gradient(90deg, #FC466B, #3F5EFB);
+            border-radius: 50%;
+            width:300px;
+            height: 300px;
+            animation: example 5s infinite alternate;
+            filter: blur(100px); 
+            /* Creating the div that will suffer the animation */
+
+        }
+        h2{
+            font-size: 4rem;
+            text-align: center;
+            font-family: 'Quicksand';
+            margin: 0;
+
+        }
+
+        @keyframes example {
+            0% {
+                 transform: rotateY(30deg) rotate(-25deg) translateZ(100px);
+         }
+            25% {
+                  transform: rotateY(-30deg) translateZ(100px);
+        }
+            50% {
+                 transform: rotateX(-50deg) translateZ(-100px);
+         }
+             75% {
+                 transform: rotateX(-50deg) translateZ(-100px);
+          }
+             100% {
+                 transform: rotateX(20deg) translateZ(0);
+                }
+
+            /* creating a flashlight effect */
+            }
+
+        @keyframes gradient {
+           0% {
+                 background-position: 0% 50%;
+        }
+           50% {
+                 background-position: 100% 50%;
+         }
+          100% { 
+                 background-position: 0% 50%;
+
+            }
+            /* Making the background goes back and forth */
+            }
+
+        @keyframes rocket {
+            0%{
+                transform: translatey(150vh);
+            }
+            20%{
+               
+                transform: translatey(-200vh);
+            }
+            100%{
+               
+               transform: translatey(150vh);
+           }
+
+           /* making the rocket goes up and down the div */
+            }
+            
+        
+
+        @keyframes loader {
+            to{
+                transform: scale(1.8);
+            }
+            /* cerating the animation for the dots they will increse and decrease in size */
+        }
+
+
+
+        @keyframes buttonanimation {
+            0% {
+                transform: rotate(0);
+            }
+            15% {
+                transform: rotate(-15deg);
+
+            }
+            20% {
+                transform: rotate(10deg);
+
+            }
+            25% {
+                transform: rotate(-10deg);
+
+            }
+            30% {
+                transform: rotate(10deg);
+
+            }
+            35% {
+                transform: rotate(-10deg);
+
+            }
+            40% , 100%{
+                transform: rotate(0);
+
+            }
+
+        }
+
+
+
+
+
+
+    </style>
+            <br><br><br>
+            <h1>Creating a button with CSS style and animation.</h1><br>
+            <Div id="button">
+
+                    <button>
+                            Click Here
+                    </button>
+            </Div>
+            <br><br><br>
+            <h1>Creating a loading icon with 3 different animations.</h1>
+            <div id="loader">
+
+                    <div class="loadericon"></div>
+                    <div class="loadericon"></div>
+                    <div class="loadericon"></div>
+
+            </div>
+
+                    <br><br><br><br>
+            <h1> Making a PNG image go up and down </h1>
+            <div id="rocket">
+               
+                <img class="rocket1" src="rocket-front-premium.webp" alt="">
+             </div>
+             <br><br><br>
+             <h1>Making the background move</h1>
+             <div id="gradient">
+
+                    <blockquote>
+                        <p > Leandro Hosken</p>
+                        <h1 >Animation tests</h1>
+                    </blockquote>
+               
+                
+             </div>
+             <br><br><br>
+             <h1>Creating a flashlight effect.</h1>
+             <div class="box">
+
+                    <div class="box1"></div>
+                    <h2>Leandro Hosken</h2>
+
+
+
+             </div>
+
+          
+
+
+</body>
+</html>

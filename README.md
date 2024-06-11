@@ -10,9 +10,9 @@
 Este projeto é um site de portfólio pessoal desenvolvido com o objetivo de revisar o conceito de Animações e suas diversas aplicabilidades.    
 
 ## ✔️ Técnicas e tecnologias utilizadas
-HTML5: Para a marcação semântica do conteúdo.    
-CSS3: Para estilização e layout, com foco em Animações.    
-Animações: Utilizando animações em HTML e CSS, oferecendo uma maneira cativante de dar vida a elementos web, adicionando interatividade e dinamismo à experiência do usuário."   
+- **HTML5**: Para a marcação semântica do conteúdo.    
+- **CSS3**: Para estilização e layout, com foco em Animações.    
+- **Animações**: Utilizando animações em HTML e CSS, oferecendo uma maneira cativante de dar vida a elementos web, adicionando interatividade e dinamismo à experiência do usuário."   
 
 ## 📁 Acesso ao projeto  
 
